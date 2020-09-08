@@ -1,14 +1,20 @@
+#Задание - открыть страницу, найти ссылку по тексиу из формулы, заполнить поля регистрации
 from selenium import webdriver
 import time
+import math
 from selenium.webdriver.common.by import By
 
-link = "http://suninjuly.github.io/simple_form_find_task.html"
+x = str(math.ceil(math.pow(math.pi, math.e)*10000))
+print(x)
+
+link = "http://suninjuly.github.io/find_link_text"
 browser = webdriver.Chrome()
 
 try:
-
     browser.get(link)
 
+    link = browser.find_element_by_link_text(x)
+    link.click()
     input1 = browser.find_element(By.TAG_NAME, "input")
     input1.send_keys("Ivan")
     input2 = browser.find_element(By.NAME, "last_name")
@@ -21,8 +27,6 @@ try:
     button.click()
 
 finally:
-    # успеваем скопировать код за 20 секунд
-    time.sleep(20)
+    time.sleep(10)
     # закрываем браузер после всех манипуляций
     browser.quit()
-# не забываем оставить пустую строку в конце файла
