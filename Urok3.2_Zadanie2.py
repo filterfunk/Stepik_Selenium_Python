@@ -1,3 +1,5 @@
+# Через Pytest запускать переместив в файл Temp
+
 import unittest
 from selenium import webdriver
 import time
