@@ -14,7 +14,7 @@ try:
     input2.send_keys("Petrov")
     input3 = browser.find_element(By.CLASS_NAME, "third")
     input3.send_keys("ivanov@mail.ru")
-    button = browser.find_element_by_xpath('//button[contains(text(), "Submit")]')
+    button = browser.find_element_by_xpath('//button[contains(text(), "Продажа авто в России")]')
     button.click()
     # Проверяем, что смогли зарегистрироваться
     # ждем загрузки страницы
